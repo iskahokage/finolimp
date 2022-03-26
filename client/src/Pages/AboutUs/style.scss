@@ -25,7 +25,7 @@
   width: 50%;
 }
 .about-img{
-  width: 50%;
+  width: 100%;
 }
 .card-box{
   border-radius: 10px!important;
@@ -41,4 +41,18 @@
   font-weight: lighter;
   padding-top: 50px;
   text-align: center;
+}
+.pros-txt{
+  margin-bottom: 20px;
+  div{
+    padding-bottom: 10px;
+  }
+  img{
+    width: 20px;
+    height: 20px;
+  }
+  span{
+    font-size: 19px;
+    margin-left: 10px;
+  }
 }
