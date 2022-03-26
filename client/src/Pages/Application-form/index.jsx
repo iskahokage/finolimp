@@ -5,6 +5,7 @@ import MyInput from "../../Components/Input";
 import InputPassword from "../../Components/InputPassword"
 import {  Clear } from '@material-ui/icons'
 import logo from '../../assets/logo_patent.png'
+import {NavLink} from "react-router-dom";
 function Application(){
     const [show, setShow] = useState(false);
     const [checked, setChecked] = useState(true);
@@ -20,7 +21,7 @@ function Application(){
                         <Container>
                             <Row>
                                 <div className="sighnupTextTop">
-                                    <h5 className="signupText">Вход в Kyrgyz Patent</h5>
+                                    <h5 className="signupText">Вход в StartApp</h5>
                                 </div>
                             </Row>
                             <Row>
@@ -71,7 +72,7 @@ function Application(){
                             <Row>
                                 <div className="bottomBox mt-5">
                                     <span className="bottomText">Уже зарегистрированы?</span>
-                                    <a className="bottomLink" href={'/sign-in'}>Войти</a>
+                                    <NavLink className="bottomLink" to={'/sign-in'}>Войти</NavLink>
                                 </div>
                             </Row>
                         </Container>
@@ -80,7 +81,7 @@ function Application(){
                     <Col sm md lg={7} className="rightBox d-none d-sm-none d-md-none d-lg-block">
                         <div className="imgBox-right">
                             <img  className="imgRight" alt='logo' src={logo}/>
-                            <span className="txtRight"> Добро пожаловать в Kyrgyz Patent! </span>
+                            <span className="txtRight"> Добро пожаловать в StartApp! </span>
                         </div>
                     </Col>
                 </Row>
