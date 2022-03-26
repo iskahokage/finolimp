@@ -3,6 +3,7 @@ import React ,{useState}from 'react';
 import {Container, Form, Button, Modal, Row, Col} from "react-bootstrap";
 import InputPassword from "../../Components/InputPassword"
 import logo from '../../assets/logo_patent.png'
+import {NavLink} from "react-router-dom";
 function Login(){
 
 
@@ -14,7 +15,7 @@ function Login(){
                         <Container>
                             <Row>
                                 <div className="sighnupTextTop">
-                                    <h5 className="signupText">Вход в Kyrgyz Patent</h5>
+                                    <h5 className="signupText">Вход в StartApp</h5>
                                 </div>
                             </Row>
                             <Row>
@@ -41,7 +42,7 @@ function Login(){
                             <Row>
                                 <div className="bottomBox mt-5">
                                     <span className="bottomText">Еще не зарегистрированы?</span>
-                                    <a className="bottomLink" href={'/sign-up'}>Зарегистрироваться</a>
+                                    <NavLink className="bottomLink" to={'/sign-up'}>Зарегистрироваться</NavLink>
                                 </div>
                             </Row>
                         </Container>
@@ -49,7 +50,7 @@ function Login(){
                     <Col sm md lg={7} className="rightBox d-none d-sm-none d-md-none d-lg-block">
                         <div className="imgBox-right">
                             <img  className="imgRight" alt='logo' src={logo}/>
-                            <span className="txtRight"> Добро пожаловать в Kyrgyz Patent! </span>
+                            <span className="txtRight"> Добро пожаловать в StartApp! </span>
                         </div>
                     </Col>
                 </Row>

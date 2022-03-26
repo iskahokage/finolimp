@@ -1,14 +1,44 @@
 
 .about-box{
-  background:url('../../assets/bg-2.jpg') no-repeat center center fixed;
+  background:url('../../assets/bg-3.jpg') no-repeat center center fixed;
   background-size: cover;
-  height: 100vh;
+  height: 500px;
 }
 
 .header-txt{
-  color: #ffffff;
+  color: #443E3E;
   h1{
-    font-size: 32px;
+    font-size: 30px;
+    font-weight: lighter;
+    padding-top: 160px;
+    text-align: center;
   }
 
+}
+
+.about-txt{
+  color: #443E3E;
+  font-size: 20px;
+}
+
+.about-descrip{
+  width: 50%;
+}
+.about-img{
+  width: 50%;
+}
+.card-box{
+  border-radius: 10px!important;
+  background: url("../../assets/abstract-3.svg") no-repeat right top ;
+}
+
+.icon{
+  height: 20px;
+  width: 20px;
+}
+.pros{
+  font-size: 30px;
+  font-weight: lighter;
+  padding-top: 50px;
+  text-align: center;
 }

@@ -1,0 +1,45 @@
+.news-bg{
+  background:url('../../assets/bg-3.jpg') no-repeat center center fixed;
+  background-size: cover;
+  height: 100vh;
+}
+
+.news-container{
+  margin-top: 110px;
+  h1{
+    text-align: center;
+    margin-bottom: 25px;
+  }
+}
+
+.newCard{
+  //width: 50%;
+  cursor: pointer;
+  background-color: #ffff;
+  border: 1px solid #ffffff;
+  border-radius: 10px;
+}
+
+.img-box{
+  width: 40px;
+  height: 40px;
+  background-color: #c9f7f5;
+  border: 1px solid #c9f7f5;
+  border-radius: 6px;
+  img{
+    height: 30px;
+  }
+}
+
+.news-photo{
+  height: 250px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.filters{
+  div{
+    margin-bottom: 10px;
+    font-size: 20px;
+  }
+}
