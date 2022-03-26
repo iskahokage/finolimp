@@ -1,0 +1,31 @@
+.inputWrapper{
+  position: relative;
+  width: auto;
+  display: flex;
+}
+
+.iconBtn{
+  position: absolute;
+  right: 12px;
+  top: 3px;
+  bottom: 3px;
+  line-height: 1 !important;
+  z-index: 4;
+  margin: 0;
+  padding: 0;
+}
+
+.input{
+  //width: 354px;
+  //height: 48px;
+  border: 1px solid var(--gray_light);
+  box-sizing: border-box;
+  //border-radius: 10px!important;
+  $enable-validation-icons: false;
+}
+
+.form-control.is-invalid, .was-validated .form-control:invalid {
+  background-image: none !important;
+  border-color: #ced4da;
+  padding-right: 0.75em;
+}
