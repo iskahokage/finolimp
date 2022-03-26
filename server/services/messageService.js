@@ -1,4 +1,3 @@
-// const {} = require('../schemas/messageSchema.js');
 
 class MessageService{
     static getAllMessages = async()=>{

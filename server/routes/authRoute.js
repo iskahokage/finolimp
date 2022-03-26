@@ -28,7 +28,7 @@ router.get(
 )
 router.get(
     '/activate/:link',
-    UserController.activate
+    UserController.activate,
 )
 
 module.exports = router

@@ -6,10 +6,13 @@ const User = sequelize.define('user', {
     id: { type: DataTypes.INTEGER, primaryKey: true, autoIncrement: true },
     email: { type: DataTypes.STRING, allowNull: false, unique: true },
     password: { type: DataTypes.STRING, allowNull: false },
-    role: {type: DataTypes.ENUM('startupper', 'investor', 'admin')}
+    role: {type: DataTypes.ENUM('startupper', 'investor', 'admin')},
+    isActivated: { type: DataTypes.BOOLEAN, defaultValue: false },
+    activationLink: { type: DataTypes.STRING },
 })
 
 const Startupper = sequelize.define("startupper", {
+    id: { type: DataTypes.INTEGER, primaryKey: true, autoIncrement: true },
     firstName: {type: DataTypes.STRING, allowNull: false },
     lastName: {type: DataTypes.STRING, allowNull: false },
     phone: {type: DataTypes.STRING, allowNull: false },
@@ -19,6 +22,7 @@ const Startupper = sequelize.define("startupper", {
 });
 
 const Investor = sequelize.define("investor", {
+    id: { type: DataTypes.INTEGER, primaryKey: true, autoIncrement: true },
     firstName: {type: DataTypes.STRING, allowNull: false },
     lastName: {type: DataTypes.STRING, allowNull: false },
     phone: {type: DataTypes.STRING, allowNull: false },
