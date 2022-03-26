@@ -1,3 +1,41 @@
 .btn-profile{
   border-radius: 10px!important;
 }
+
+.profile-bg{
+  background:url('../../assets/bg-3.jpg') no-repeat center center fixed;
+  background-size: cover;
+}
+
+.profile-container{
+  margin-top: 110px;
+  h1{
+    text-align: center;
+    margin-bottom: 25px;
+  }
+}
+
+.profile-card {
+  background-color: #ffff;
+  border: 1px solid #ffffff;
+  border-radius: 10px!important;
+}
+
+.requirements-img{
+  height: 200px;
+  width: 200px;
+}
+
+.requirements{
+  div{
+    padding-bottom: 10px;
+  }
+  img{
+    width: 20px;
+    height: 20px;
+  }
+  span{
+    font-size: 19px;
+    margin-left: 10px;
+  }
+}
