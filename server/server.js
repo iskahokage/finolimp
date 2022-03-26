@@ -11,7 +11,7 @@ const errorMiddleware = require('./middlewares/errorMiddleware.js')
 const PORT = process.env.PORT || 8000;
 const app = express()
 app.use(cors())
-app.use('/api/v1',express.static(path.resolve(__dirname, 'public/assets/img/postss')))
+app.use('/api/v1',express.static(path.resolve(__dirname, 'public/assets/img/posts')))
 app.use('/api/v1',express.static(path.resolve(__dirname, 'public/assets/img/products')))
 app.use('/api/v1',express.static(path.resolve(__dirname, 'public/assets/img/services')))
 app.use(express.json())

@@ -2,9 +2,9 @@ const UserService = require('../services/userService.js')
 class UserController{
     static registration = async (req, res, next) => {
         try {
-          const { email, password } = req.body;
+          const { email, password, role } = req.body;
     
-          const userData = await UserService.registration(email, password);
+          const userData = await UserService.registration(email, password, role);
     
           return res.json(userData);
         } catch (error) {
@@ -63,8 +63,7 @@ class UserController{
         try {
 
             const {link} = req.params;
-
-            await UserService.activateUser(link)
+            await UserService.activate(link)
 
             return res.redirect('http://google.com')
 

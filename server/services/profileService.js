@@ -1,8 +1,11 @@
 const { Investor, Startupper } = require("./../models/models.js");
 const ErrorService = require("./helpers/errorService.js");
 class InvestorService {
-    static create = async ({ firstName, lastName, phone, userId }) => {
-        return await Investor.create({ firstName, lastName, phone, userId });
+    static create = async ({ firstName, lastName, phone, certificate, company, userId }) => {
+
+      const oldProfile = await Investor.findOne({ where: { userId } });
+      if (oldProfile) throw ErrorService.BadRequest("Profile with this email already registered!");
+        return await Investor.create({ firstName, lastName, phone, certificate, company, userId });
     };
     static getAll = async () => {
         return await Investor.findAll();
@@ -42,6 +45,8 @@ class StartupperService {
         mvp,
         userId,
     }) => {
+        const oldProfile = await Investor.findOne({ where: { userId } });
+        if (oldProfile) throw ErrorService.BadRequest("Profile with this email already registered!");
         return await Startupper.create({
             firstName,
             lastName,

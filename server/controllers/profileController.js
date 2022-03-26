@@ -3,12 +3,10 @@ const {InvestorService, StartupperService} = require('./../services/profileServi
 class InvestorController{
     static create = async(req, res, next) =>{
         try {
-            const {firstName, lastName, phone } = req.body;
-            const {user} = req;
-            console.log(user)
-            console.log(firstName)
-            await InvestorService.create({firstName, lastName, phone, userId: user.id})
-            return res.json({msg: "Your investor profile successfully created"})
+            let {firstName, lastName, phone, certificate, company } = req.body;
+            let {user} = req;
+            await InvestorService.create({firstName, lastName, phone, certificate, company, userId: user.id})
+            return res.json({msg: `Your investor profile successfully created`})
         } catch (error) {
             next(error)
         }
