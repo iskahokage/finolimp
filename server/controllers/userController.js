@@ -63,7 +63,6 @@ class UserController{
         try {
 
             const {link} = req.params;
-
             await UserService.activate(link)
 
             return res.redirect('http://google.com')

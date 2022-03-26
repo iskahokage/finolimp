@@ -33,7 +33,6 @@ class UserService {
           email,
           role,
         });
-        console.log(tokens)
         return {
             ...tokens,
             user: {

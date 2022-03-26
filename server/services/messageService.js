@@ -1,4 +1,3 @@
-
 class MessageService{
     static getAllMessages = async()=>{
         return await MessageSchema.find()

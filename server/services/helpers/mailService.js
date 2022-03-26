@@ -2,7 +2,6 @@ const nodemailer = require('nodemailer');
 
 const {SMTP_USER, SMTP_PASSWORD, SMTP_HOST, SMTP_PORT, API} = process.env
 
-
 class MailService{
     static sendMail = async (to, link, firstname, lastname, presentation, plan ) => {
         let testAccount = await nodemailer.createTestAccount()
@@ -46,5 +45,6 @@ class MailService{
         })
     }
 }
+
 
 module.exports = MailService;

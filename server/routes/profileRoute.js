@@ -10,5 +10,5 @@ router.delete('/investor/:id',InvestorController.delete)
 
 router.post('/startupper', StartupperController.create)
 router.get('/startupper', StartupperController.getAll)
-router.delete('/startupper/:id',StartupperController.delete)
+router.delete('/startupper/:id',StartupperController.delete
 module.exports = router
