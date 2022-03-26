@@ -22,6 +22,8 @@ const Investor = sequelize.define("investor", {
     firstName: {type: DataTypes.STRING, allowNull: false },
     lastName: {type: DataTypes.STRING, allowNull: false },
     phone: {type: DataTypes.STRING, allowNull: false },
+    certificate: {type: DataTypes.STRING, allowNull: false},
+    company: {type: DataTypes.STRING}
 })
 
 const Post = sequelize.define('post',{
