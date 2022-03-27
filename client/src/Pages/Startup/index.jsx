@@ -11,6 +11,7 @@ function Startup() {
 
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
+
     return (
         <PageWrapper>
             <Container fluid className='su-bg'>
