@@ -5,6 +5,8 @@ import Profile from "./Pages/Profile";
 import AboutUs from "./Pages/AboutUs";
 import News from "./Pages/News";
 import NewsDetails from "./Pages/NewsDetails";
+import Startup from "./Pages/Startup";
+import StartupDetails from "./Pages/StartupDetails";
 
 function App() {
   return (
@@ -16,6 +18,8 @@ function App() {
             <Route element={<AboutUs/>} path='/' exact/>
             <Route element={<News/>} path='/news' exact/>
             <Route element={<NewsDetails/>} path='/news-details' exact/>
+            <Route element={<Startup/>} path='/projects' exact/>
+            <Route element={<StartupDetails/>} path='/project-details' exact/>
         </Routes>
       </BrowserRouter>
 

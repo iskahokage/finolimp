@@ -8,8 +8,8 @@ function Menu() {
     const navItems = [
         { id: 0, to: '/', text: 'О нас' },
         { id: 1, to: '/news', text: 'Новости' },
-        { id: 2, to: '/about', text: 'Стартаперам' },
-        { id: 3, to: '/about', text: 'Инвесторам' },
+        { id: 2, to: '/projects', text: 'Стартап проеты' },
+        { id: 3, to: '/investors', text: 'Инвесторы' },
     ]
     return (
         <div >
