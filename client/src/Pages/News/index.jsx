@@ -20,13 +20,13 @@ function News() {
                                 <Card className='newCard  shadow-lg p-3 bg-white rounded' >
                                     <Card.Body>
                                         <h3>Фильтры новостей</h3>
-                                        <Form.Select aria-label="Default select example">
-                                            <option>Город</option>
-                                            <option value="1">Бишкек</option>
-                                            <option value="2">Ош</option>
-                                            <option value="3">Нарын</option>
-                                            <option value="3">Иссык-Куль</option>
-                                        </Form.Select>
+                                        {/*<Form.Select aria-label="Default select example">*/}
+                                        {/*    <option>Город</option>*/}
+                                        {/*    <option value="1">Бишкек</option>*/}
+                                        {/*    <option value="2">Ош</option>*/}
+                                        {/*    <option value="3">Нарын</option>*/}
+                                        {/*    <option value="3">Иссык-Куль</option>*/}
+                                        {/*</Form.Select>*/}
                                         <Form className='d-flex flex-column mt-2 filters'>
                                             <Form.Check
                                                 inline
