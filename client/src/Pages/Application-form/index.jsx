@@ -88,18 +88,7 @@ function Application(){
 
             </Container>
 
-            // <Modal show={show} onHide={handleClose} centered>
-            //     <div className="d-flex justify-content-end my-2 mx-2">
-            //         <Clear onClick={()=>handleClose()}/>
-            //     </div>
-            //     <Modal.Body className="d-flex flex-column justify-content-center align-items-center">
-            //         <h3 className="modalTop">Спасибо за регистрацию! </h3>
-            //         <div className="modalBody">
-            //             Ваша заявка отправленна на одобрение, ожидайте оповещение. Вам придет сообщение на email, указанный Вами при регистрации.                    </div>
-            //         <img src={logo} className="modalImg" alt={'logo'}/>
-            //     </Modal.Body>
-            //
-            // </Modal>
+
         // </div>
     )
 }

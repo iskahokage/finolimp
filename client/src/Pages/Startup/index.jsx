@@ -1,11 +1,16 @@
-import React from 'react';
-import {Container, Col, Row, Card, Form, Button} from 'react-bootstrap';
+import React, {useState} from 'react';
+import {Container, Col, Row, Card, Form, Button, Modal} from 'react-bootstrap';
 import './style.scss'
 import PageWrapper from "../../Components/PageWrapper";
-import {useNavigate} from "react-router-dom";
+import {  Clear } from '@material-ui/icons'
+import {NavLink, useNavigate} from "react-router-dom";
 
 function Startup() {
     const navigate = useNavigate()
+    const [show, setShow] = useState(false);
+
+    const handleClose = () => setShow(false);
+    const handleShow = () => setShow(true);
 
     return (
         <PageWrapper>
@@ -70,7 +75,7 @@ function Startup() {
 
                                             </div>
                                             <div>
-                                                <Button variant="outline-secondary" onClick={()=>{navigate('/project-details')}}>Подробнее</Button>
+                                                <Button variant="outline-secondary" onClick={handleShow}>Подробнее</Button>
                                             </div>
                                         </div>
                                     </Card.Body>
@@ -80,6 +85,20 @@ function Startup() {
                     </Card>
                 </Container>
             </Container>
+             <Modal show={show} onHide={handleClose} centered>
+                 <div className="d-flex justify-content-end my-2 mx-2">
+                     <Clear onClick={()=>handleClose()}/>
+                 </div>
+                 <Modal.Body className="d-flex flex-column justify-content-center align-items-center">
+                     {/*// <h3 className="modalTop">Спасибо за регистрацию! </h3>*/}
+                     <div className="modalBody mx-2">
+                         Что бы перейти на эту страницу Вам необходимо
+                         <NavLink className="mx-2" to={'/sign-up'}>войти</NavLink>.
+                     </div>
+                     {/*<img src={logo} className="modalImg" alt={'logo'}/>*/}
+                 </Modal.Body>
+
+             </Modal>
         </PageWrapper>
 
 

@@ -71,7 +71,9 @@ function AboutUs() {
                     <div className='pros'>
                         <h1>В чем наше преимущество?</h1>
                     </div>
-                    <div className='pros-txt'>
+
+                    <div className='pros-txt mb-5'>
+
                         <div>
                             <img src={tick}/>
                             <span>Единая площадка для инвесторов и стартаперов</span>
@@ -82,7 +84,8 @@ function AboutUs() {
                         </div>
                         <div>
                             <img src={tick}/>
-                            <span>Единая площадка для инвесторов и стартаперов</span>
+                            <span>Возможность привлечения иностранных инвестиций</span>
+
                         </div>
                     </div>
                 </Container>

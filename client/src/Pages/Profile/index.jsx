@@ -1,12 +1,19 @@
-import React from 'react';
-import {Container, Form, Button, Card, Row, Col} from 'react-bootstrap';
+import React, {useState} from 'react';
+import {Container, Form, Button, Card, Row, Col, Modal} from 'react-bootstrap';
 import MyInput from "../../Components/Input";
 import PageWrapper from "../../Components/PageWrapper";
 import './style.scss'
 import img from '../../assets/custom-3.svg'
 import tick from "../../assets/tick-svgrepo-com.svg";
+import {Clear} from "@material-ui/icons";
+import logo from "../../assets/logo_patent.png";
 
 function Profile() {
+    const [show, setShow] = useState(false);
+    const [checked, setChecked] = useState(true);
+
+    const handleClose = () => setShow(false);
+    const handleShow = () => setShow(true);
     return (
         <PageWrapper>
             <Container fluid className='profile-bg'>
@@ -71,7 +78,7 @@ function Profile() {
                                 {/*</Form.Group>*/}
 
                                 <div className='d-flex justify-content-end mb-5'>
-                                    <Button className='btn-profile mt-3'>
+                                    <Button className='btn-profile mt-3' onClick={handleShow}>
                                         Отправить на рассмотрение
                                     </Button>
                                 </div>
@@ -82,6 +89,18 @@ function Profile() {
                     </Card>
                 </Container>
             </Container>
+            <Modal show={show} onHide={handleClose} centered>
+                <div className="d-flex justify-content-end my-2 mx-2">
+                    <Clear onClick={()=>handleClose()}/>
+                </div>
+                <Modal.Body className="d-flex flex-column justify-content-center align-items-center">
+                    <h3 className="modalTop">Спасибо за регистрацию! </h3>
+                    <div className="modalBody">
+                        Ваша заявка отправленна на одобрение, ожидайте оповещение. Вам придет сообщение на email, указанный Вами при регистрации.                    </div>
+                    <img src={logo} className="modalImg" alt={'logo'}/>
+                </Modal.Body>
+
+            </Modal>
         </PageWrapper>
 
 
